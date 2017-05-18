@@ -1,0 +1,12 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker info
+    - docker-compose build
+
+test:
+  override:
+    - docker-compose run terraform validate
