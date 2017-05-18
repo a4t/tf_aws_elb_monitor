@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/a4t/tf_aws_elb_monitor/tree/master.svg?style=svg)](https://circleci.com/gh/a4t/tf_aws_elb_monitor/tree/master)
+![CircleCI](https://circleci.com/gh/a4t/tf_aws_elb_monitor/tree/master.svg?style=shield&circle-token=27e688ba54b28abf5fd76a6248a45305998f0804)
 
 # tf_aws_elb_monitor
 
