@@ -24,10 +24,8 @@ RUN apk update && \
     rm -rf /tmp/* && \
     rm -rf /var/tmp/*
 
-ADD ./docker/terraform/endpoint.sh /endpoint.sh
-
 WORKDIR /terraform
 
-ENTRYPOINT ["/endpoint.sh"]
+ENTRYPOINT ["/usr/bin/terraform"]
 
 CMD ["--help"]
