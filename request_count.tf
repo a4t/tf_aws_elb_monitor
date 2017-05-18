@@ -18,7 +18,7 @@ resource "aws_cloudwatch_metric_alarm" "request_count_min" {
 
 resource "aws_cloudwatch_metric_alarm" "request_count_max" {
   alarm_name          = "awselb-${var.elb_name}-Request-Count-Max"
-  comparison_operator = "GreaterThanThreshold "
+  comparison_operator = "GreaterThanThreshold"
   evaluation_periods  = "1"
   metric_name         = "RequestCount"
   namespace           = "AWS/ELB"
