@@ -1,0 +1,10 @@
+networks: {}
+version: '2.0'
+
+services:
+  terraform:
+    build:
+      context: ./
+      dockerfile: ./docker/terraform/Dockerfile
+    volumes:
+      - ./:/terraform
