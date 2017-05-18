@@ -15,4 +15,3 @@ resource "aws_cloudwatch_metric_alarm" "backend_connection_errors" {
   alarm_description = "${var.elb_name} Backend connection errors"
   alarm_actions     = "${var.alarm_actions}"
 }
-
