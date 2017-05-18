@@ -1,4 +1,4 @@
-aresource "aws_cloudwatch_metric_alarm" "request_count_min" {
+resource "aws_cloudwatch_metric_alarm" "request_count_min" {
   alarm_name          = "awselb-${var.elb_name}-Request-Count-Min"
   comparison_operator = "LessThanThreshold"
   evaluation_periods  = "1"
