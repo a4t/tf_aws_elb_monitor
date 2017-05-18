@@ -11,7 +11,7 @@ resource "aws_cloudwatch_metric_alarm" "backend_5xx" {
 
   statistic         = "Sum"
   period            = "60"
-  threshold         = "${var.thresholds_backend_5XX}"
+  threshold         = "${var.thresholds_backend_5xx}"
   alarm_description = "${var.elb_name} Backend 5xx"
   alarm_actions     = "${var.alarm_actions}"
 }
