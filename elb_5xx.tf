@@ -11,7 +11,7 @@ resource "aws_cloudwatch_metric_alarm" "elb_5xx" {
 
   statistic         = "Sum"
   period            = "60"
-  threshold         = "10"
+  threshold         = "${var.thresholds_elb_5xx}"
   alarm_description = "${var.elb_name} ELB 5xx"
   alarm_actions     = "${var.alarm_actions}"
 }

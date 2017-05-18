@@ -11,7 +11,7 @@ resource "aws_cloudwatch_metric_alarm" "request_count" {
 
   statistic         = "Sum"
   period            = "60"
-  threshold         = "${var.request_count_threshold}"
+  threshold         = "${var.thresholds_request_count}"
   alarm_description = "${var.elb_name} Request Count"
   alarm_actions     = "${var.alarm_actions}"
 }

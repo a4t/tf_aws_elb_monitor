@@ -11,7 +11,7 @@ resource "aws_cloudwatch_metric_alarm" "high_average_latency" {
 
   statistic         = "Average"
   period            = "60"
-  threshold         = "${var.latency_threshold}"
+  threshold         = "${var.thresholds_latency}"
   alarm_description = "${var.elb_name} High Average Latency"
   alarm_actions     = "${var.alarm_actions}"
 }

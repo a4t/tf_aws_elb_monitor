@@ -11,7 +11,7 @@ resource "aws_cloudwatch_metric_alarm" "unhealthy_hosts" {
 
   statistic         = "Maximum"
   period            = "60"
-  threshold         = "1"
+  threshold         = "${var.thresholds_unhealthy_host_count}"
   alarm_description = "${var.elb_name} UnHealthy Host Count"
   alarm_actions     = "${var.alarm_actions}"
 }

@@ -11,7 +11,7 @@ resource "aws_cloudwatch_metric_alarm" "surge_queue_length" {
 
   statistic         = "Sum"
   period            = "60"
-  threshold         = "10"
+  threshold         = "${var.thresholds_surge_queue_length}"
   alarm_description = "${var.elb_name} Surge Queue Length"
   alarm_actions     = "${var.alarm_actions}"
 }
