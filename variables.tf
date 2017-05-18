@@ -1,6 +1,6 @@
 variable elb_name {}
 
-variable thresholds_request_count             {}
+variable thresholds_request_count             { default = {}  } # Require min, max
 variable thresholds_surge_queue_length        { default = 1   }
 variable thresholds_latency                   { default = 100 }
 variable thresholds_healthy_host_count        { default = 1   }
