@@ -1,7 +1,7 @@
 resource "aws_cloudwatch_metric_alarm" "unhealthy_hosts" {
   alarm_name          = "awselb-${var.elb_name}-Unhealthy-Hosts"
   comparison_operator = "GreaterThanOrEqualToThreshold"
-  evaluation_periods  = "1"
+  evaluation_periods  = "5"
   metric_name         = "UnHealthyHostCount"
   namespace           = "AWS/ELB"
 
@@ -9,7 +9,7 @@ resource "aws_cloudwatch_metric_alarm" "unhealthy_hosts" {
     "LoadBalancerName" = "${var.elb_name}"
   }
 
-  statistic         = "Maximum"
+  statistic         = "Minimum"
   period            = "60"
   threshold         = "${var.thresholds_unhealthy_host_count}"
   alarm_description = "${var.elb_name} UnHealthy Host Count"

@@ -1,7 +1,7 @@
 resource "aws_cloudwatch_metric_alarm" "backend_connection_errors" {
   alarm_name          = "awselb-${var.elb_name}-Backend-connection-errors"
   comparison_operator = "GreaterThanOrEqualToThreshold"
-  evaluation_periods  = "1"
+  evaluation_periods  = "5"
   metric_name         = "BackendConnectionErrors"
   namespace           = "AWS/ELB"
 
@@ -9,7 +9,7 @@ resource "aws_cloudwatch_metric_alarm" "backend_connection_errors" {
     "LoadBalancerName" = "${var.elb_name}"
   }
 
-  statistic         = "Sum"
+  statistic         = "Minimum"
   period            = "60"
   threshold         = "${var.thresholds_backend_connection_errors}"
   alarm_description = "${var.elb_name} Backend connection errors"
